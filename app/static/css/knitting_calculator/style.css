@@ -1,0 +1,19 @@
+html {
+  font-family: helvetica, arial, sans-serif;
+  font-size: .875em;
+  line-height: 1.5;
+}
+
+body {
+  padding-right: 4%;
+  padding-left: 4%;
+}
+
+form.calculateParameters {
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+form.calculateParameters div {
+    padding: 10px;
+}

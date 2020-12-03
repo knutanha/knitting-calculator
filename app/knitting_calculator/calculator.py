@@ -1,8 +1,8 @@
 import json
 
 """temporary input"""
-mFrom = int(input("Ant masker du har: "))
-mTo = int(input("Ant masker du vil ende med: "))
+# mFrom = int(input("Ant masker du har: "))
+# mTo = int(input("Ant masker du vil ende med: "))
 
 
 def calc_knit(mfrom, mto):
@@ -112,7 +112,8 @@ def jsonify_result(knittingmessage, solution):
     solDict = {'knittingMsg': knittingmessage, 'solList': solution}
 
     # create json
-    return json.dumps(solDict, ensure_ascii=False)
+    return solDict
+    # return json.dumps(solDict, ensure_ascii=False)
 
 
-calc_knit(mFrom, mTo)
+#calc_knit(mFrom, mTo)
