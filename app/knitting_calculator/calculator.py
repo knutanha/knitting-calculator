@@ -84,11 +84,11 @@ def calc(solutionv, z, res, r, applist, mto, mfrom, reduce):
 
     # replace Y with knitting action
     if reduce:
-        solutionv = ['2 sammen' if a == 'Y' else a for a in solutionv]
+        solutionv = ['Strikk 2 sammen' if a == 'Y' else a for a in solutionv]
         knittingmessage = 'Du må redusere ' + str(mfrom - mto) + ' masker. Under er forslag til mønster'
 
     if not reduce:
-        solutionv = ['øk en m' if a == 'Y' else a for a in solutionv]
+        solutionv = ['Lag en ny maske' if a == 'Y' else a for a in solutionv]
         knittingmessage = 'Du må øke med ' + str(mto - mfrom) + ' masker. Under er forslag til mønster  '
 
     # make solution a nice, readable list
