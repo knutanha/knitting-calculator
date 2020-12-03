@@ -21,4 +21,4 @@ def knitting_calculator_json():
     data = {'steps': [{'step': step, 'target': target, 'init': init} for step in range(target, init)],
             'result': knit_calc.calc_knit(init, target)}
     # data = {'steps': [{'step': step, 'target': target, 'init': init} for step in range(target, init)]}
-    return render_template('knitting_calculator/knitting_result.html', data=data)
+    return render_template('knitting_calculator/knitting_result_alt.html', data=data)

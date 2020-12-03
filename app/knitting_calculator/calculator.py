@@ -10,8 +10,7 @@ def calc_knit(mfrom, mto):
     inputerror = input_validation(mfrom, mto)
 
     if inputerror:
-        print(inputerror)
-        quit(0)
+        return {'knittingMsg': inputerror, 'solList': []}
 
     """initialize """
     reduce = None
@@ -31,19 +30,17 @@ def calc_knit(mfrom, mto):
     solution, knittingmessage, errormessage = calc(solutionv, z, res, r, applist, mto, mfrom, reduce)
 
     if errormessage:
-        print(errormessage)
-        quit(0)
+        return {'knittingMsg': errormessage, 'solList': []}
 
     # serialize json
     solution_json = jsonify_result(knittingmessage, solution)
 
-    print(solution_json)
+    # print(solution_json)
 
     return solution_json
 
 
 def input_validation(mfrom, mto):
-
     inputerr = None
 
     if mto == mfrom:
@@ -115,5 +112,9 @@ def jsonify_result(knittingmessage, solution):
     return solDict
     # return json.dumps(solDict, ensure_ascii=False)
 
+# calc_knit(mFrom, mTo)
 
-#calc_knit(mFrom, mTo)
+
+if __name__ == '__main__':
+    print(calc_knit(17, 20))
+    print(calc_knit(20, 17))
