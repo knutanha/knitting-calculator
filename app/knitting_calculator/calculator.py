@@ -96,7 +96,7 @@ def calc(solutionv, z, res, r, applist, mto, mfrom, reduce):
     for i in range(len(solutionv)):
         if solutionv[i] == 'x':
             counter += 1
-            if i < len(solutionv) - 1 and solutionv[i+1]:
+            if i < len(solutionv) - 1 and solutionv[i+1] != 'x':
                 solution.append('Strikk ' + str(counter) + ' m')
                 counter = 0
             elif i == len(solutionv) - 1:
