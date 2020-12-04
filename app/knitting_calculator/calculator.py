@@ -52,6 +52,8 @@ def input_validation(mfrom, mto):
     if mfrom > mto and mfrom > 2 * mto:
         inputerr = 'Jeg støtter ikke reduksjon med mer enn halvparten av maskene.'
 
+    if mfrom > 1e5 or mto > 1e5:
+        inputerr = 'Jeg støtter ikke mer enn 100000 masker. Det blir for mye!'
     return inputerr
 
 

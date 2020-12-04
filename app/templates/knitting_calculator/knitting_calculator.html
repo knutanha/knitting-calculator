@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Knitting Bot</title>
-        <link rel="stylesheet" href="../../static/css/knitting_calculator/style.css">
-    </head>
-    <body>
-        <div id="header">
-            <h1>Emilys strikkeapp</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Knitting Bot</title>
+    <link rel="stylesheet" href="../../static/css/knitting_calculator/style.css">
+    <link rel="stylesheet" href="../../static/css/external/custom_checkbox.css">
+</head>
+<body>
+<div id="formContainer">
+    <div id="header">
+        <h2>Emilys strikkeapp</h2>
+    </div>
+    <div class="disclaimer">
+        PS: Jeg er i beta-versjon!
+    </div>
+    <form class="calculateParameters">
+        <div>
+            <label for="from">Antall masker du har</label>
+            <input type="text" id="mask_count_init" value="20">
         </div>
-        <div id="formContainer">
-            <form class="calculateParameters">
-                <div>
-                    <label for="from">Fra</label>
-                    <input type="text" id="mask_count_init" value="20">
-                </div>
-                <div>
-                    <label for="to">Til</label>
-                    <input type="text" id="mask_count_target" value="17">
-                </div>
-                <button type="button" id="calculateButton">Beregn</button>
-            </form>
+        <div>
+            <label for="to">Antall masker du vil ende med</label>
+            <input type="text" id="mask_count_target" value="17">
         </div>
-        <div id="resultContainer"></div>
-    </body>
+    </form>
+    <button type="button" id="calculateButton">Beregn</button>
+</div>
+<div id="resultContainer"></div>
+</body>
 <footer>
     <script src="../../static/javascript/external/jquery-3.5.1.min.js"></script>
     <script src="../../static/javascript/knitting_calculator/script.js"></script>

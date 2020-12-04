@@ -1,19 +1,86 @@
 html {
-  font-family: helvetica, arial, sans-serif;
-  font-size: .875em;
-  line-height: 1.5;
+    font-family: helvetica, arial, sans-serif;
+    font-size: .875em;
+    line-height: 1.5;
 }
 
 body {
-  padding-right: 4%;
-  padding-left: 4%;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 4%;
+    background-image: url("../../pictures/knitting_calculator/knit_texture.jpg");
+}
+
+body > div {
+    margin-bottom: 1.5em;
+}
+
+input[type="text"] {
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background-color: white;
+    margin: 0;
+    padding: 6px 12px;
+    padding-right: 12px;
+    -webkit-appearance: none;
+    min-width: 200px;
+}
+
+input[type="text"]:focus {
+    border: 2px solid steelblue;
+}
+
+button[type="button"] {
+    border: 2px solid transparent;
+    background-color: steelblue;
+    color: white;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    box-shadow: none;
+    line-height: 1.6;
+    font-size: 1rem;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    text-decoration: underline;
+}
+
+div#formContainer {
+    background-color: white;
+    padding: 1em;
+}
+
+div#formContainer > * {
+    margin-bottom: 1em;
 }
 
 form.calculateParameters {
+    display: flex;
     flex-wrap: wrap;
-    background-color: gray;
 }
 
 form.calculateParameters div {
-    padding: 10px;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+form.calculateParameters div label {
+    display: block;
+    padding: 0 0 7px 1px;
+    font-weight: bold;
+}
+
+div#resultContainer {
+    background-color: white;
+}
+
+div#resultContainer > div {
+    padding: 1em;
+}
+
+.disclaimer {
+    padding: 1rem;
+    background-color: rgba(204, 0, 0, 0.2);
+    margin-bottom: 1em;
 }

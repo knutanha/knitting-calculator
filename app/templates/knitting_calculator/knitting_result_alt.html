@@ -1,7 +1,9 @@
-<p>{{ data.result.knittingMsg }}</p>
-{% for step in data.result.solList %}
-    <div>
-        <input type="checkbox" id="step-{{ loop.index0 }}">
-        <label for="step-{{ loop.index0 }}">Steg {{ loop.index0 }}: {{ step }}</label>
-    </div>
-{% endfor %}
+<div>
+    <h3>{{ data.result.knittingMsg }}</h3>
+    {% for step in data.result.solList %}
+        <label class="container" for="step-{{ loop.index0 }}">Steg {{ loop.index }}: {{ step }}
+            <input type="checkbox" id="step-{{ loop.index0 }}">
+            <span class="checkmark"></span>
+        </label>
+    {% endfor %}
+</div>
