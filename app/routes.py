@@ -9,7 +9,7 @@ def knitting_calulator():
     return render_template('knitting_calculator/knitting_calculator.html')
 
 
-@app.route('/knitting-calculator/calculate', methods=['GET', 'POST'])
+@app.route('/calculate', methods=['GET', 'POST'])
 def knitting_calculator_json():
     init = request.args.get('init')
     target = request.args.get('target')
